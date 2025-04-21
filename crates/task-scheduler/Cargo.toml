@@ -1,0 +1,30 @@
+[package]
+name = "task-scheduler"
+version = "0.1.0"
+edition = "2021"
+authors = ["AI Orchestrator Team"]
+description = "Task queue and execution management for AI Orchestrator"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+common = { path = "../common" }
+resource-manager = { path = "../resource-manager" }
+model-manager = { path = "../model-manager" }
+logging = { path = "../logging" }
+config = { path = "../config" }
+
+tokio = { version = "1.28", features = ["full"] }
+tracing = "0.1"
+anyhow = "1.0"
+thiserror = "1.0"
+async-trait = "0.1"
+futures = "0.3"
+dashmap = "5.4"
+parking_lot = "0.12"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+priority-queue = "1.3"
+uuid = { version = "1.3", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+tokio-util = { version = "0.7", features = ["time"] }
+crossbeam = "0.8"

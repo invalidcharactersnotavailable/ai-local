@@ -1,0 +1,34 @@
+[package]
+name = "security"
+version = "0.1.0"
+edition = "2021"
+authors = ["AI Orchestrator Team"]
+description = "Authentication and authorization for AI Orchestrator"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+common = { path = "../common" }
+logging = { path = "../logging" }
+config = { path = "../config" }
+
+tokio = { version = "1.28", features = ["full"] }
+tracing = "0.1"
+anyhow = "1.0"
+thiserror = "1.0"
+async-trait = "0.1"
+futures = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+jsonwebtoken = "8.3"
+argon2 = "0.5"
+rand = "0.8"
+uuid = { version = "1.3", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+dashmap = "5.4"
+parking_lot = "0.12"
+http = "0.2"
+tower-http = { version = "0.4", features = ["auth"] }
+axum = { version = "0.6", features = ["headers"] }
+base64 = "0.21"
+sha2 = "0.10"
+hmac = "0.12"

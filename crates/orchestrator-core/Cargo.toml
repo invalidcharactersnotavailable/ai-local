@@ -1,0 +1,31 @@
+[package]
+name = "orchestrator-core"
+version = "0.1.0"
+edition = "2021"
+authors = ["AI Orchestrator Team"]
+description = "Core orchestration logic for AI Orchestrator"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+common = { path = "../common" }
+model-manager = { path = "../model-manager" }
+resource-manager = { path = "../resource-manager" }
+task-scheduler = { path = "../task-scheduler" }
+inference-engine = { path = "../inference-engine" }
+hardware-profiler = { path = "../hardware-profiler" }
+performance-monitor = { path = "../performance-monitor" }
+api-gateway = { path = "../api-gateway" }
+logging = { path = "../logging" }
+config = { path = "../config" }
+
+tokio = { version = "1.28", features = ["full"] }
+tracing = "0.1"
+anyhow = "1.0"
+thiserror = "1.0"
+async-trait = "0.1"
+futures = "0.3"
+dashmap = "5.4"
+parking_lot = "0.12"
+crossbeam = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
